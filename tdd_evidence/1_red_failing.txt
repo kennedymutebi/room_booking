@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/claude/room_booking
+collecting ... collected 5 items
+
+tests/test_br1.py::test_br1_valid_period_is_accepted PASSED              [ 20%]
+tests/test_br1.py::test_br1_end_before_start_is_rejected PASSED          [ 40%]
+tests/test_br1.py::test_br1_boundary_minimum_duration_is_accepted PASSED [ 60%]
+tests/test_br1.py::test_br1_too_short_duration_is_rejected PASSED        [ 80%]
+tests/test_br1.py::test_br1_too_long_duration_is_rejected FAILED         [100%]
+
+=================================== FAILURES ===================================
+____________________ test_br1_too_long_duration_is_rejected ____________________
+
+    def test_br1_too_long_duration_is_rejected():
+        start = datetime(2026, 10, 1, 9, 0)
+        end = start + timedelta(hours=9)
+>       with pytest.raises(InvalidBookingPeriodError):
+E       Failed: DID NOT RAISE InvalidBookingPeriodError
+
+tests/test_br1.py:42: Failed
+=========================== short test summary info ============================
+FAILED tests/test_br1.py::test_br1_too_long_duration_is_rejected - Failed: DI...
+========================= 1 failed, 4 passed in 0.03s ==========================

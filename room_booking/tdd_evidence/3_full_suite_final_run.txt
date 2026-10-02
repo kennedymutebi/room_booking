@@ -1,0 +1,28 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/claude/room_booking
+collecting ... collected 20 items
+
+tests/test_aggregate_b_rejection.py::test_t8_room_aggregate_rejects_an_overlapping_follow_up PASSED [  5%]
+tests/test_br1.py::test_br1_valid_period_is_accepted PASSED              [ 10%]
+tests/test_br1.py::test_br1_end_before_start_is_rejected PASSED          [ 15%]
+tests/test_br1.py::test_br1_boundary_minimum_duration_is_accepted PASSED [ 20%]
+tests/test_br1.py::test_br1_too_short_duration_is_rejected PASSED        [ 25%]
+tests/test_br1.py::test_br1_too_long_duration_is_rejected PASSED         [ 30%]
+tests/test_br2.py::test_br2_pending_booking_can_be_confirmed PASSED      [ 35%]
+tests/test_br2.py::test_br2_confirmed_booking_cannot_be_confirmed_again PASSED [ 40%]
+tests/test_br2.py::test_br2_cancelled_booking_cannot_be_confirmed PASSED [ 45%]
+tests/test_br3.py::test_br3_non_overlapping_slots_are_both_accepted PASSED [ 50%]
+tests/test_br3.py::test_br3_overlapping_slot_is_rejected PASSED          [ 55%]
+tests/test_br3.py::test_br3_boundary_back_to_back_slots_do_not_overlap PASSED [ 60%]
+tests/test_br4.py::test_br4_room_with_enough_capacity_and_free_slot_is_accepted PASSED [ 65%]
+tests/test_br4.py::test_br4_room_over_capacity_is_rejected PASSED        [ 70%]
+tests/test_br4.py::test_br4_room_already_booked_for_period_is_rejected PASSED [ 75%]
+tests/test_br5.py::test_br5_confirming_a_booking_raises_a_booking_confirmed_event PASSED [ 80%]
+tests/test_br5.py::test_br5_events_are_cleared_after_being_pulled PASSED [ 85%]
+tests/test_br6.py::test_br6_booking_for_unknown_room_is_rejected PASSED  [ 90%]
+tests/test_br6.py::test_br6_booking_for_existing_room_passes_the_lookup PASSED [ 95%]
+tests/test_main_use_case.py::test_t7_successful_booking_confirms_and_reserves_room_slot PASSED [100%]
+
+============================== 20 passed in 0.04s ==============================

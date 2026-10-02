@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/claude/room_booking
+collecting ... collected 5 items
+
+tests/test_br1.py::test_br1_valid_period_is_accepted PASSED              [ 20%]
+tests/test_br1.py::test_br1_end_before_start_is_rejected PASSED          [ 40%]
+tests/test_br1.py::test_br1_boundary_minimum_duration_is_accepted PASSED [ 60%]
+tests/test_br1.py::test_br1_too_short_duration_is_rejected PASSED        [ 80%]
+tests/test_br1.py::test_br1_too_long_duration_is_rejected PASSED         [100%]
+
+============================== 5 passed in 0.01s ===============================
