@@ -86,4 +86,3 @@ class BookingPeriod:
             adjacent).
         """
         return self.start_time < other.end_time and other.start_time < self.end_time
-#  sdhjsjsjsj#
